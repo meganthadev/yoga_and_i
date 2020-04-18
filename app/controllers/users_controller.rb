@@ -5,7 +5,11 @@ class UsersController < ApplicationController
   end
 
   post '/login' do
-    binding.pry
+    @user = User.find_by(email: params[:email])
+    if @user.authenticate(password: params[:password])
+      @session = 
+    else
+      "Invalid Password"
   end
 
   get '/signup' do
