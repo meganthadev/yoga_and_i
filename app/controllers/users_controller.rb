@@ -4,4 +4,7 @@ class UsersController < ApplicationController
     erb :login
   end
 
-end   
+  get '/signup' do
+  end
+
+end
