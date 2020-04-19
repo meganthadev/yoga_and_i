@@ -20,11 +20,16 @@ class UsersController < ApplicationController
   end
 
   post '/users' do
-   binding.pry
+   if params[:name] != "" && params[:email] != "" && params[:password] != ""
+     @user = User.create(params)
+     redirect "/users/#{@user.id}"
+   else
+     
+   end
   end
 
   get '/users/:id' do
-    "This will be user show route"
+    erb :'/users/show'
   end
 
 end
