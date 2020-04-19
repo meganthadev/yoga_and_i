@@ -12,6 +12,7 @@ class UsersController < ApplicationController
       redirect "users/#{@user.id}"
     else
       "Invalid Password"
+      #redirect to login page
    end
   end
 
@@ -24,12 +25,20 @@ class UsersController < ApplicationController
      @user = User.create(params)
      redirect "/users/#{@user.id}"
    else
-     
+     #want to put a message here telling user what wrong
+     redirect '/signup'
    end
   end
 
   get '/users/:id' do
+    @user = User.find_by(id: params[:id] )
+    session[:user_id] = @user.id
     erb :'/users/show'
+  end
+
+  get '/logout' do
+    session.clear
+    redirect '/'
   end
 
 end
