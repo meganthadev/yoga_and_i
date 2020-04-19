@@ -19,6 +19,10 @@ class UsersController < ApplicationController
     erb :signup
   end
 
+  post '/users' do
+   binding.pry
+  end
+
   get '/users/:id' do
     "This will be user show route"
   end
