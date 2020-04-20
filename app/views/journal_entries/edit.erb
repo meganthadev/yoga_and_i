@@ -1,0 +1,9 @@
+<h2>Edit Your Journal Entry: </h2>
+
+<form class="" action="/journal_entries/<%= @journal_entry.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <label for="content">Content:</label>
+  <textarea name="content" style="width:auto; height:auto"><%= @journal_entry.content %></textarea>
+  <input type="submit" name="" value="Save Entry">
+
+</form>
