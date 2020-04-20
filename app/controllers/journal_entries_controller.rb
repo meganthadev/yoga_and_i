@@ -5,8 +5,7 @@ class JournalEntriesController < ApplicationController
   end
 
   post '/journal_entries' do
-    raise params.inspect
-    if !logged_in
+    if !logged_in?
       redirect '/'
     end
     if params[:content] != ""
@@ -15,6 +14,15 @@ class JournalEntriesController < ApplicationController
     else
       redirect '/journal_entries/new'
     end
+  end
+
+  get '/journal_entries/:id' do
+    @journal_entry = JournalEntry.find(params[:id] )
+    erb :'/journal_entries/show'
+  end
+
+  get '/journal_entries/:id/edit' do
+    "editing"
   end
 
 end
