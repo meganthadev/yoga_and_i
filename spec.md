@@ -5,7 +5,7 @@ Specifications for the Sinatra Assessment:
  [x] Include more than one model class (e.g. User, Post, Category) # I included a user, journal, and goal model
  [x] Include at least one has_many relationship on your User model (e.g. User has_many Posts) # User model has many journals/goals
  [x] Include at least one belongs_to relationship on another model (e.g. Post belongs_to User) # Goals/Journals belongs to User
- [x] Include user accounts with unique login attribute (username or email) # I chose to use email for uniq login attr
+ [x] Include user accounts with unique login attribute (username or email) # I chose to use email for unique login attributw
  [ ] Ensure that the belongs_to resource has routes for Creating, Reading, Updating and Destroying
  [ ] Ensure that users can't modify content created by other users
  [ ] Include user input validations
