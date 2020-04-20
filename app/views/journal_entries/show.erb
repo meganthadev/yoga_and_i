@@ -1,8 +1,10 @@
 Show Page for Journal Entry
 <br>
 
-<p><%= @journal_entry.content %></p>
+  <p><%= @journal_entry.content %></p>
 
-<a href="/journal_entries/<%= @journal_entry.id %>/edit ">Edit Entry</a>
-<br>
-<a href="/journal_entries/<%= @journal_entry.id %>/edit ">Delete Entry</a>
+<% if current_user == @journal_entry.user  %>
+  <a href="/journal_entries/<%= @journal_entry.id %>/edit ">Edit Entry</a>
+  <br>
+  <a href="/journal_entries/<%= @journal_entry.id %>/delete ">Delete Entry</a>
+<% end %>
