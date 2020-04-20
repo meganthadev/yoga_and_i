@@ -42,7 +42,7 @@ class JournalEntriesController < ApplicationController
   patch '/journal_entries/:id' do
     set_journal_entry
     if logged_in?
-     if @journal_entry.user == current_user
+     if authorized_to_edit?(@journal_entry)
        @journal_entry.update(content: params[:content] )
        redirect "/journal_entries/#{@journal_entry.id}"
     else
@@ -50,6 +50,16 @@ class JournalEntriesController < ApplicationController
    end
  else
    redirect '/'
+  end
+ end
+
+ delete '/journal_entries/:id' do
+   set_journal_entry
+   if authorized_to_edit?(@journal_entry)
+     @journal_entry.destroy
+     redirect '/journal_entries'
+   else
+     redirect '/journal_entries'
   end
  end
 
