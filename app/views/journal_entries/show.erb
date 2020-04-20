@@ -3,7 +3,7 @@ Show Page for Journal Entry
 
   <p><%= @journal_entry.content %></p>
 
-<% if current_user == @journal_entry.user  %>
+<% if authorized_to_edit?(@journal_entry) %>
   <a href="/journal_entries/<%= @journal_entry.id %>/edit ">Edit Entry</a>
   <br>
   <a href="/journal_entries/<%= @journal_entry.id %>/delete ">Delete Entry</a>
