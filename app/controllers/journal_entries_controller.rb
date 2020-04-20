@@ -4,18 +4,8 @@ class JournalEntriesController < ApplicationController
     erb :'/journal_entries/new'
   end
 
-  post '/journal_entries'
+  post '/journal_entries' do
     #new journal entry
   end
 
-  get '/show' do
-    erb :journal_entries/show
-  end
-
-  get '/all_entries' do
-    #index route for all entries
-  end
-
-
-
-end
+end 
