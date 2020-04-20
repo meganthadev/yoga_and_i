@@ -52,3 +52,4 @@ User Stories
  - Tests
  - Public or Private
  - Include Goal Model (track goals by date?)
+ - Clean up date as title in index view
