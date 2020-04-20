@@ -1,5 +1,10 @@
 class JournalEntriesController < ApplicationController
 
+  get '/journal_entries' do
+    @journal_entries = JournalEntry.all
+    erb :'journal_entries/index'
+  end
+
   get '/journal_entries/new' do
     erb :'/journal_entries/new'
   end
