@@ -1,1 +1,8 @@
-Show Page for Journal Entry 
+Show Page for Journal Entry
+<br>
+
+<p><%= @journal_entry.content %></p>
+
+<a href="/journal_entries/<%= @journal_entry.id %>/edit ">Edit Entry</a>
+<br>
+<a href="/journal_entries/<%= @journal_entry.id %>/edit ">Delete Entry</a>
