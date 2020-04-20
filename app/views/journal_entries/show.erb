@@ -5,6 +5,9 @@ Show Page for Journal Entry
 
 <% if authorized_to_edit?(@journal_entry) %>
   <a href="/journal_entries/<%= @journal_entry.id %>/edit ">Edit Entry</a>
-  <br>
-  <a href="/journal_entries/<%= @journal_entry.id %>/delete ">Delete Entry</a>
+  <br> <br>
+    <form class="" action="/journal_entries/<%= @journal_entry.id %>" method="post">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" name="" value="Delete this Entry">
+  </form>
 <% end %>
