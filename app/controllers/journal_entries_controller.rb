@@ -42,7 +42,7 @@ class JournalEntriesController < ApplicationController
   patch '/journal_entries/:id' do
     set_journal_entry
     if logged_in?
-     if authorized_to_edit?(@journal_entry)
+     if authorized_to_edit?(@journal_entry) && params[:content] != ""
        @journal_entry.update(content: params[:content] )
        redirect "/journal_entries/#{@journal_entry.id}"
     else
