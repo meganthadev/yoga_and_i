@@ -23,14 +23,30 @@ class JournalEntriesController < ApplicationController
 
   get '/journal_entries/:id/edit' do
     set_journal_entry
-    erb :'/journal_entries/edit'
+    if logged_in?
+      if @journal_entry.user == current_user
+      erb :'/journal_entries/edit'
+    else
+      redirect "users/#{current_user.id}"
+    end
+  else
+    redirect '/'
+   end
   end
 
   patch '/journal_entries/:id' do
     set_journal_entry
-    @journal_entry.update(content: params[:content] )
-    redirect "/journal_entries/#{@journal_entry.id}"
+    if logged_in?
+     if @journal_entry.user == current_user
+       @journal_entry.update(content: params[:content] )
+       redirect "/journal_entries/#{@journal_entry.id}"
+    else
+      redirect "/users/#{@current_user.id}"
+   end
+ else
+   redirect '/'
   end
+ end
 
  private
 
