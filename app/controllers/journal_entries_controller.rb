@@ -29,7 +29,7 @@ class JournalEntriesController < ApplicationController
   get '/journal_entries/:id/edit' do
     set_journal_entry
     if logged_in?
-      if @journal_entry.user == current_user
+      if authorized_to_edit?(@journal_entry)
       erb :'/journal_entries/edit'
     else
       redirect "users/#{current_user.id}"
