@@ -1,7 +1,7 @@
-Show Page for Journal Entry
-<br>
+Journal Title
 
-  <p><%= @journal_entry.content %></p>
+<br>
+ <p><%= @journal_entry.content %></p>
 
 <% if authorized_to_edit?(@journal_entry) %>
   <a href="/journal_entries/<%= @journal_entry.id %>/edit ">Edit Entry</a>
