@@ -9,9 +9,10 @@ class UsersController < ApplicationController
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
       puts session
+      flash[:message] = "Namaste, #{@user.name}, and Welcome to Your 'You' Space!"
       redirect "users/#{@user.id}"
     else
-      flash[:message] = "Invalid Credentials. Please sign up or try logging in again."
+      flash[:errors] = "Invalid Credentials. Please sign up or try logging in again."
       redirect '/login'
    end
   end
