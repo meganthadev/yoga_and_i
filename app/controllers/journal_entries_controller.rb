@@ -48,7 +48,7 @@ class JournalEntriesController < ApplicationController
        @journal_entry.update(content: params[:content] )
        redirect "/journal_entries/#{@journal_entry.id}"
     else
-      flash[:errors] = "Cannot save edits to with no text."
+      flash[:errors] = "Cannot save edits with no text."
       redirect "/users/#{@current_user.id}"
    end
  else
