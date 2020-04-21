@@ -11,7 +11,7 @@ class UsersController < ApplicationController
       puts session
       redirect "users/#{@user.id}"
     else
-      "Invalid Password"
+      flash[:message] = "Invalid Credentials. Please sign up or try logging in again."
       redirect '/login'
    end
   end
