@@ -1,4 +1,6 @@
 require './config/environment'
+require 'sinatra/flash'
+
 
 class ApplicationController < Sinatra::Base
 
@@ -7,6 +9,7 @@ class ApplicationController < Sinatra::Base
     set :views, 'app/views'
     enable :sessions
     set :session_secret, "yoga_journal_app"
+    register Sinatra::Flash
   end
 
   get "/" do
