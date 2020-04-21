@@ -14,9 +14,11 @@ class JournalEntriesController < ApplicationController
       redirect '/'
     end
     if params[:content] != ""
+      flash[:message] = "Saved!"
       @journal_entry = JournalEntry.create(content: params[:content], user_id: current_user.id)
       redirect "/journal_entries/#{@journal_entry.id}"
     else
+      flash[:message] = "Please enter some text to save a new entry."
       redirect '/journal_entries/new'
     end
   end
