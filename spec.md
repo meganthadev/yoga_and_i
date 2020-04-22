@@ -10,8 +10,8 @@ Specifications for the Sinatra Assessment:
  [x] Ensure that users can't modify content created by other users   # Doesn't show links for non-matching user and uses helper methods in
         App Controller to ensure that delete/edit actions only happen if current user owns the entry
  [x] Include user input validations    
- [ ] BONUS - not required - Display validation failures to user with error message (example form URL e.g. /posts/new)
- [ ] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
+ [x] BONUS - not required - Display validation failures to user with error message (example form URL e.g. /posts/new)
+ [x] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
 Confirm
 
  [x] You have a large number of small Git commits
