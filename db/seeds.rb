@@ -7,9 +7,9 @@ tracy = User.create(name: "Tracy", email: "tracy@email.com", password: "password
 
 # Create Some Journal Entries
 
-megans_journal_1 = JournalEntry.create(content: "Lovely Day", user_id: megan.id)
+megans_journal_1 = JournalEntry.create(title: "Missing Bill", content: "Lovely Day", user_id: megan.id)
 
 megan.journal_entries.create(content: "Hello there")
 
-tracys_entry = tracy.journal_entries.build(content: "Yep")
-tracys_entry.save 
+tracys_entry = tracy.journal_entries.build( title: "1 title", content: "Yep")
+tracys_entry.save
