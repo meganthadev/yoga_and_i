@@ -66,8 +66,9 @@
 
 <header class="showjournal_showcase">
   <div class="showjournal_container showjournal_showcase-inner">
-    <br><h2 style="font-size: 40px; text-align: center; color: #483D8B;">Journal Title:<br></h2><br><br>
+    <br><br><h2 style="font-size: 40px; text-align: center; color: #483D8B;"><%= @journal_entry.title %><br></h2><br><br>
  <p style="color: #483D8B; text-align: center; font-size: 25px;"><%= @journal_entry.content %></p><br><br>
+
 
 <% if authorized_to_edit?(@journal_entry) %>
   <a href="/journal_entries/<%= @journal_entry.id %>/edit " class="button">Edit Entry</a>
@@ -77,5 +78,6 @@
     <input type="submit" class="button" value="Delete this Entry">
   </form>
 <% end %>
+<br><br><p style="color: #483D8B; text-align: center;">Created On:  <%= @journal_entry.format_created_at %></p><br>
 </body>
 </html>
