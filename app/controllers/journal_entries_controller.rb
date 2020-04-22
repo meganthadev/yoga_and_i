@@ -55,8 +55,8 @@ end
   patch '/journal_entries/:id' do
     set_journal_entry
     if logged_in?
-     if authorized_to_edit?(@journal_entry) && params[:content] != ""
-       @journal_entry.update(content: params[:content] )
+     if authorized_to_edit?(@journal_entry) && params[:title] != "" && params[:content] != ""
+       @journal_entry.update(title: params[:title], content: params[:content] )
        redirect "/journal_entries/#{@journal_entry.id}"
     else
       flash[:errors] = "Cannot save edits with no text, please try again."
