@@ -11,11 +11,16 @@
     body {
       background-image: url("/images/indexbackg.jpg");
       background-size: cover;
-      background-color: #cccccc;
       background-repeat: no-repeat;
+      background-position: center top;
+      background-attachment: scroll;
+      background-color: #cccccc;
       max-width: 100%;
       color: #98FB98;
+      overflow: visible
   }
+
+
   .index_container {
       max-width: 960px;
       margin: auto;
@@ -25,7 +30,7 @@
 
   .index_showcase {
       background-color: rgb(255, 239, 213);
-      opacity: .9;
+      opacity: .8;
       color: #6B8E23;
       }
 
@@ -41,14 +46,17 @@
 
   </style>
   </head>
+
+
   <header class="index_showcase">
   <div class="index_container index_showcase-inner">
-  <h2>All Journal Entries:</h2>
+  <h2>All Journal Entries:</h2><br>
 
 <% @journal_entries.each do |journal_entry| %>
-  <h4><a href="/journal_entries/<%= journal_entry.id %>"><%= journal_entry.created_at %></a></h4>
-  <p><%= journal_entry.content %></p>
-  <p> By <%= journal_entry.user.name %></p>
+  <h4><strong><%= journal_entry.title %></strong></h4><br>
+  <p><%= journal_entry.content %></p><br>
+  <p> By: <%= journal_entry.user.name %></p>
+  <br><h5><a href="/journal_entries/<%= journal_entry.id %>"><%= journal_entry.format_created_at %></a></h5>
   <br> <br>
 <% end %>
 </div>
