@@ -1,13 +1,15 @@
-A Simple Journal App Not Just to Track Your Yoga Practice, but to Track Your 'You' Progress!
+Yoga and I 
 
-Users can sign up, log in/(log out), and create and view journal entries. Users can edit or delete ONLY their own journal entries.
+A Simple Journaling App - Not Just to Track Your Yoga Practice, but to Track Your 'You' Progress!
+
+Users of this app can sign up, log in/log out, and create, view, or edit journal entries. Users are only able to edit or delete their own journal entries. You cannot create journal entries or view the site's journal index unless you are logged into the app. 
 
 
 Installation Instructions:
 
 1) Run bundle install --full-index
 2) run  git remote set-url origin git@github.com:meganthadev/yoga_and_i_app.git  once before any git commits
-
+3) Run shotgun to start server and view application in browser
 
 
 
