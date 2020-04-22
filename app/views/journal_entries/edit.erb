@@ -1,9 +1,59 @@
-<h2>Edit Your Journal Entry: </h2>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/main.css">
+
+  <style>
+    body {
+      background-image: url("/images/editpg.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-attachment: scroll;
+      background-color: #cccccc;
+      max-width: 100%;
+      color: #98FB98;
+      overflow: visible
+}
+
+.editer_container {
+max-width: 960px;
+margin: auto;
+overflow: hidden;
+padding: 0 3rem;
+}
+
+.editer_showcase {
+background-color: rgb(255, 239, 213);
+opacity: .9;
+color: #6495ED;
+height: 45vh;
+}
+
+.index_showcase-inner {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: justify;
+height: 100%;
+}
+
+
+</style>
+</head>
+<header class="editer_showcase">
+<div class="editer_container editer_showcase-inner" style="text-align:center;">
+  <br><br><h2>Edit Your Journal Entry: </h2><br><br>
 
 <form class="" action="/journal_entries/<%= @journal_entry.id %>" method="post">
   <input type="hidden" name="_method" value="patch">
   <label for="content">Content:</label>
   <textarea name="content" style="width:auto; height:auto"><%= @journal_entry.content %></textarea>
-  <input type="submit" name="" value="Save Entry">
+  <input type="submit" name="" value="Save Entry"><br><br><br>
 
 </form>
