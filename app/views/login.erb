@@ -1,14 +1,59 @@
-<h2>Login To Your Account:</h2>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/main.css">
+  <link rel="stylesheet" href="/stylesheets/login.css">
+
+  <style>
+    body {
+      background-image: url("/images/yoga2.jpg");
+      background-color: #cccccc;
+      background-repeat: no-repeat;
+      max-width: 100%;
+      height: auto;
+      color: #FFA07A;
+      margin-top: 3%;
+}
+ form {
+  text-align: center;
+  color: #FFA07A;
+}
+.button {
+  background-color: #FFA07A;
+  border: none;
+  color: white;
+  padding: 6px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'Muli', sans-serif;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+  <header class="login_showcase">
+    <div class="login_container login_showcase-inner">
+      <h2 style="font-size: 40px; text-align: center; color: #FFA07A;">Login To Your Zen Place:</h2><br><br>
 
 
-<form class="" action="/login" method="post">
-  <label for="email">Email: </label>
-  <input type="text" name="email" value="">
-  <label for="password">Password: </label>
-  <input type="password" name="password" value="">
-  <input type="submit" value="Login">
-</form>
+      <form class="" action="/login" method="post">
+        <label for="email">Email: </label>
+        <input type="text" name="email" value="">
+        <label for="password">Password: </label>
+        <input type="password" name="password" value="">
+        <input type="submit" class="button" value="Login">
+      </form>
 
-<br>
-<br>
+      <br>
+      <br>
+    </body>
 <a href="/">Go Back</a>
+</html>
