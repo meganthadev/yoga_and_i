@@ -1,4 +1,4 @@
-class CreateJournalEntries < ActiveRecord::Migration
+columnjournal_entries"class CreateJournalEntries < ActiveRecord::Migration
   def change
     create_table :journal_entries do |t|
       t.string :content
