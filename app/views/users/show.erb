@@ -1,16 +1,31 @@
+<!DOCTYPE html>
+<html>
 <head>
-    <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/main.css">
+  <link rel="stylesheet" href="/stylesheets/dashboard.css">
+
+  <style>
     body {
-background-image: url("/images/dashbackground.jpg");
-background-color: #cccccc;
-background-repeat: no-repeat;
-opacity: 0.9;
-max-width: 100%;
-height: auto;
+      background-image: url("/images/dashbackground.jpg");
+      background-color: #cccccc;
+      background-repeat: no-repeat;
+      max-width: 100%;
+      height: auto;
+      color: #98FB98;
 }
+
 </style>
 </head>
+  <header class="dashboard_showcase">
+  <div class="dashboard_container dashboard_showcase-inner">
+      <h2 style="color: #98FB98; text-align: left; font-size: 25px;"><%= @user.name %>'s Tranquil Space</h2>
+      <h3 style="color: #98FB98; text-align: center; font-size: 25px;">Email:</h3>
+      <h4 style="color: #98FB98; text-align: center; font-size: 25px;"><%= @user.email %></h4>
+ </div>
 
-<h2><%= @user.name %>'s Tranquil Space</h2>
-<h3>Email:</h3>
-<h4><%= @user.email %></h4>
+
+</html>
