@@ -37,6 +37,7 @@ body {
 }
 
 .showcase {
+  text-shadow: 2px 2px #FFF;
     margin-top: 7%;
     background-color: rgb(255, 239, 213);
     color: #ffffff;
