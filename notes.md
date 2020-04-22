@@ -1,6 +1,6 @@
 App Overview
 
-An app that stores journal entries and goal entries, centered around yogic lifestyle.
+An app that stores journal entries to track your progress for poses or for other things, made with the yogic lifestyle in mind.
 
 User Stories
 
@@ -33,7 +33,7 @@ User Stories
         Associations
            -belongs_to :user
 
- Goal
+ (Stretch Goal- Goal Model)
 
         Attributes
            -content
@@ -45,7 +45,7 @@ User Stories
              -belongs_to :user
 
  MVP (minimum viable product)
-  Users can sign up, log in, log out, create journal entries or goal entries, edit their own entries, view those, and delete
+  Users can sign up, log in, log out, create journal entries to track yoga progress, edit their own entries, view those, and delete
 
  Stretch goals
  - CSS
