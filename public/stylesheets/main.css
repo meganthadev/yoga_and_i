@@ -27,6 +27,8 @@ html, body {
 body {
     font-family: 'Muli', sans-serif;
     line-height: 1;
+    background-attachment: fixed;
+    background-
   }
 
 .container {
