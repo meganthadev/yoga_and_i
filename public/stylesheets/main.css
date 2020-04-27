@@ -48,6 +48,7 @@ body {
 
 .showcase:before {
     content:'';
+    background-attachment: fixed;
     background: url('../images/yoga3.jpg') no-repeat center center/cover;
     position: absolute;
     top: 0;
