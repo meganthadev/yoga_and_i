@@ -9,7 +9,7 @@
 - You cannot create journal entries or view the site's journal index unless you are logged into the app. 
 
 
-Installation Instructions:
+### Installation Instructions:
 
 1) Run bundle install --full-index
 2) run  git remote set-url origin git@github.com:meganthadev/yoga_and_i_app.git  once before any git commits
