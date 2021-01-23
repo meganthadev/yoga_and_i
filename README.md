@@ -7,7 +7,7 @@
 - Users of this app can sign up, log in/log out, and create, view, or edit journal entries.
 - Users are only able to edit or delete their own journal entries.
 - You cannot create journal entries or view the site's journal index unless you are logged into the app. 
-
+- Users can track their Yoga positions
 
 ### Installation Instructions:
 
