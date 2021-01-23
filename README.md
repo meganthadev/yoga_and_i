@@ -8,6 +8,7 @@
 - Users are only able to edit or delete their own journal entries.
 - Users cannot create journal entries or view the site's journal index unless they are logged into the app. 
 - Users can track their Yoga positions
+- Users can plan and track meditations 
 
 ### Installation Instructions:
 
