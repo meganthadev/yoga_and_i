@@ -1,6 +1,6 @@
 # Yoga and I 
 
-## A Simple Journaling App - Not Just to Track Your Yoga Practice, but to Track Your 'You' Progress!
+## A Simple Goal/Journal App - Not Just to Track Your Yoga Practice, but to Track Your 'You' Progress!
 
 ### Features:
 
