@@ -2,7 +2,7 @@
 
 ## A Simple Goal/Journal App - Not Just to Track Your Yoga Practice, but to Track Your 'You' Progress!
 
-### Features:
+### App Features:
 
 - Users of this app can sign up, log in/log out, and create, view, or edit journal entries.
 - Users are only able to edit or delete their own journal entries.
